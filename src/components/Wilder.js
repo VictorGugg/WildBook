@@ -14,7 +14,7 @@ const Wilder = ({name, skills}) => {
         <h4>Wild Skills</h4>
         <ul className={styles.skills}>
             {skills.map((skill) => {
-            return <Skill name={skill.title} grade={skill.votes} />
+            return <Skill name={skill.name} grade={skill.votes} />
             })}
         </ul>
     </article>
