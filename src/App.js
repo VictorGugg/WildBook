@@ -1,4 +1,5 @@
 import './App.css';
+import styles from './App.module.css';
 import Wilder from './components/Wilder';
 
 const wildersData = [
@@ -41,13 +42,13 @@ const App = () => {
   return (
     <div >
       <header>
-        <div className='container'>
+        <div className={styles.container}>
           <h1>WildBook</h1>
         </div>
       </header>
-      <main className='container'>
+      <main className={styles.container}>
         <h2>Wilders</h2>
-        <section className='card-row'>
+        <section className={styles.cardRow}>
           {/* Using array.map allows to loop on each element of an array to modifiy it.
               Here we're looping on the wildersDara array, naming each element as 'wilder',
               using props to assign dynamic values to our Wilder component based on
@@ -59,7 +60,7 @@ const App = () => {
         </section>
       </main>
       <footer>
-        <div className='container'>
+        <div className={styles.container}>
           <p>&copy; 2023 VictorGugg@WildCodeSchool</p>
         </div>
       </footer>
