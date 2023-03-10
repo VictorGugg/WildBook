@@ -4,6 +4,7 @@ import { useState } from "react";
 const AddWilder = () => {
     // Wilder's name is a string, so we pass an empty string to useState
     const [name, setName] = useState('');
+    const [city, setCity] = useState('');
     return (
         <form
             onSubmit={(event) => {
@@ -17,7 +18,7 @@ const AddWilder = () => {
             (here using axios to follow the post route of the API
             and giving the name props/value from the form)
              */
-            axios.post('http://localhost:3030/api/wilder', { name });
+            axios.post('http://localhost:3030/api/wilder', { name, city });
             }}
         >
             <label>Name :</label>
@@ -31,6 +32,15 @@ const AddWilder = () => {
                 */
                 onChange={(event) => {
                     setName(event.target.value);
+                }}
+            />
+            <br />
+            <label>City :</label>
+            <input
+                type='text'
+                value={city}
+                onChange={(event) => {
+                    setCity (event.target.value);
                 }}
             />
             <br />
